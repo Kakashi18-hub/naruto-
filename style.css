@@ -1,0 +1,244 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background-color: #121212;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+/* Main Layout */
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1a1a1a;
+    width: 340px;
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.character-list {
+    list-style: none;
+    padding: 0;
+}
+
+.character-list li {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffcc00;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.character-list li:hover, .character-list li.active {
+    background-color: #ffcc00;
+    color: black;
+    border-radius: 0.5rem;
+}
+
+/* Character Information Section */
+.main-content {
+    flex: 1;
+    background-color: #121212;
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.character-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.character-info img {
+    width: 300px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.character-details {
+    flex: 1;
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+}
+
+.character-details h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 0.5rem;
+}
+
+/* Sticky Navigation */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 10;
+    border-bottom: 2px solid #fff;
+}
+
+.sticky-nav-icons {
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky-nav-options button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sticky-nav-options button:hover {
+    background-color: #e6b800;
+}
+
+/* Music Player */
+.music-player {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    width: 50%;
+    background-color: rgb(29, 34, 32);
+}
+
+.player-control-icon {
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+
+.player-control-icon:hover {
+    opacity: 1;
+}
+
+.playback-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 70%;
+    appearance: none;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 2px solid #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        overflow-y: auto;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .character-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .character-info img {
+        width: 80%;
+    }
+
+    .player {
+        width: 90%;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        max-height: 250px;
+        overflow-y: auto;
+        text-align: center;
+        padding: 0.5rem 0;
+        background-color: #121212;
+        z-index: 100;
+    }
+
+    .character-info img {
+        width: 90%;
+    }
+
+    .music-player {
+        height: 60px;
+    }
+}
+
+@media (max-width: 500px) {
+    .character-info img {
+        width: 95%;
+    }
+
+    .music-player {
+        height: 55px;
+    }
+
+    .progress-bar {
+        width: 50%;
+    }
+}
